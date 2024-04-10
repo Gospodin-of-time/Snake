@@ -60,6 +60,7 @@ namespace Головоломка
             {
                 for (int j = 0; j < field.GetLength(0); j++)
                 {
+                    field[i, j].Text = "";
                     field[i, j].Visible = true;
                     field[i, j].Enabled = true;
                 }
@@ -110,49 +111,53 @@ namespace Головоломка
         {
             if (direction == 0)
             {
-                if (snakeHeadX + 1 >= field.GetLength(0))
+                if (snakeHeadX + 1 >= field.GetLength(0) || field[snakeHeadX + 1, snakeHeadY].Text != "")
                 {
                     timer1.Enabled = false;
                     MessageBox.Show("Game over");
                 }
                 else
                 {
+                    field[snakeHeadX, snakeHeadY].Text = "";
                     snakeHeadX++;
                 }
             }
             else if (direction == 1)
             {
-                if (snakeHeadY + 1 >= field.GetLength(1) || field[snakeHeadX, snakeHeadY++].Text != "")
+                if (snakeHeadY + 1 >= field.GetLength(1) || field[snakeHeadX, snakeHeadY + 1].Text != "")
                 {
                     timer1.Enabled = false;
                     MessageBox.Show("Game over");
                 }
                 else
                 {
+                    field[snakeHeadX, snakeHeadY].Text = "";
                     snakeHeadY++;
                 }
             }
             else if (direction == 2)
             {
-                if (snakeHeadX - 1 < 0)
+                if (snakeHeadX - 1 < 0 || field[snakeHeadX - 1, snakeHeadY].Text != "")
                 {
                     timer1.Enabled = false;
                     MessageBox.Show("Game over");
                 }
                 else
                 {
+                    field[snakeHeadX, snakeHeadY].Text = "";
                     snakeHeadX--;
                 }
             }
             else if (direction == 3)
             {
-                if (snakeHeadY - 1 < 0)
+                if (snakeHeadY - 1 < 0 || field[snakeHeadX, snakeHeadY - 1].Text != "")
                 {
                     timer1.Enabled = false;
                     MessageBox.Show("Game over");
                 }
                 else
                 {
+                    field[snakeHeadX, snakeHeadY].Text = "";
                     snakeHeadY--;
                 }
             }
