@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Головоломка.Properties;
 
 namespace Головоломка
 {
@@ -16,53 +17,51 @@ namespace Головоломка
         {
             InitializeComponent();
         }
-        Button[,] field = new Button[5, 5];
-        short direction;
-        short snakeHeadX;
-        short snakeHeadY;
+        PictureBox[,] field = new PictureBox[5, 5];
+        int direction;
+        int snakeHeadX;
+        int snakeHeadY;
         private void button26_Click(object sender, EventArgs e)
         {
-            button26.Visible = false;
-            CreateField(field); 
+            button1.Visible = false;
+            CreateField(ref field); 
         }
-        private void CreateField(Button[,] field)
+        private void CreateField(ref PictureBox[,] field)
         {
-            field[0, 0] = button1;
-            field[1, 0] = button2;
-            field[2, 0] = button3;
-            field[3, 0] = button4;
-            field[4, 0] = button5;
+            field[0, 0] = pictureBox5;
+            field[0, 1] = pictureBox6;
+            field[0, 2] = pictureBox7;
+            field[0, 3] = pictureBox8;
+            field[0, 4] = pictureBox9;
 
-            field[0, 1] = button6;
-            field[1, 1] = button7;
-            field[2, 1] = button8;
-            field[3, 1] = button9;
-            field[4, 1] = button10;
+            field[1, 0] = pictureBox10;
+            field[1, 1] = pictureBox11;
+            field[1, 2] = pictureBox12;
+            field[1, 3] = pictureBox13;
+            field[1, 4] = pictureBox14;
 
-            field[0, 2] = button11;
-            field[1, 2] = button12;
-            field[2, 2] = button13;
-            field[3, 2] = button14;
-            field[4, 2] = button15;
+            field[2, 0] = pictureBox15;
+            field[2, 1] = pictureBox16;
+            field[2, 2] = pictureBox17;
+            field[2, 3] = pictureBox18;
+            field[2, 4] = pictureBox19;
 
-            field[0, 3] = button16;
-            field[1, 3] = button17;
-            field[2, 3] = button18;
-            field[3, 3] = button19;
-            field[4, 3] = button20;
+            field[3, 0] = pictureBox20;
+            field[3, 1] = pictureBox21;
+            field[3, 2] = pictureBox22;
+            field[3, 3] = pictureBox23;
+            field[3, 4] = pictureBox24;
 
-            field[0, 4] = button21;
-            field[1, 4] = button22;
-            field[2, 4] = button23;
-            field[3, 4] = button24;
-            field[4, 4] = button25;
+            field[4, 0] = pictureBox25;
+            field[4, 1] = pictureBox26;
+            field[4, 2] = pictureBox27;
+            field[4, 3] = pictureBox28;
+            field[4, 4] = pictureBox29;
             for (int i = 0; i < field.GetLength(0); i++)
             {
                 for (int j = 0; j < field.GetLength(0); j++)
                 {
-                    field[i, j].Text = "";
-                    field[i, j].Visible = true;
-                    field[i, j].Enabled = true;
+
                 }
             }
             //direction: 0 = right, 1 = down, 2 = left, 3 = up
@@ -72,103 +71,95 @@ namespace Головоломка
             timer1.Enabled = true;
         }
 
-        private void ElementClick(object sender, EventArgs e)
-        {
-            for (int i = 0; i < field.GetLength(0); i++)
-            {
-                for (int j = 0; j < field.GetLength(1); j++)
-                {
-                    if (field[i, j] == sender)
-                    {
-                        if (direction == 0 || direction == 2)
-                        {
-                            if (j == snakeHeadY + 1)
-                            {
-                                direction = 1;
-                            }
-                            else if (j == snakeHeadY - 1)
-                            {
-                                direction = 3;
-                            }
-                        }
-                        else if (direction == 1 || direction == 3)
-                        {
-                            if (i == snakeHeadX + 1)
-                            {
-                                direction = 0;
-                            }
-                            else if (i == snakeHeadX - 1)
-                            {
-                                direction = 2;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (direction == 0)
+            switch (direction)
             {
-                if (snakeHeadX + 1 >= field.GetLength(0) || field[snakeHeadX + 1, snakeHeadY].Text != "")
-                {
-                    timer1.Enabled = false;
-                    MessageBox.Show("Game over");
-                }
-                else
-                {
-                    field[snakeHeadX, snakeHeadY].Text = "";
-                    snakeHeadX++;
-                }
+                case 0:
+                    if (snakeHeadX + 1 >= field.GetLength(0) || field[snakeHeadY, snakeHeadX + 1].Image == Resources.snakeHead)
+                    {
+                        timer1.Enabled = false;
+                        MessageBox.Show("Game over");
+                    }
+                    else
+                    {
+                        snakeHeadX++;
+                    }
+                    break;
+                case 1:
+                    if (snakeHeadY + 1 >= field.GetLength(1) || field[snakeHeadY + 1, snakeHeadX].Image == Resources.snakeHead)
+                    {
+                        timer1.Enabled = false;
+                        MessageBox.Show("Game over");
+                    }
+                    else
+                    {
+                        snakeHeadY++;
+                    }
+                    break;
+                case 2:
+                    if (snakeHeadX - 1 < 0 || field[snakeHeadY, snakeHeadX - 1].Image == Resources.snakeHead)
+                    {
+                        timer1.Enabled = false;
+                        MessageBox.Show("Game over");
+                    }
+                    else
+                    {
+                        snakeHeadX--;
+                    }
+                    break;
+                case 3:
+                    if (snakeHeadY - 1 < 0 || field[snakeHeadY - 1, snakeHeadX].Image == Resources.snakeHead)
+                    {
+                        timer1.Enabled = false;
+                        MessageBox.Show("Game over");
+                    }
+                    else
+                    {
+                        snakeHeadY--;
+                    }
+                    break;
             }
-            else if (direction == 1)
-            {
-                if (snakeHeadY + 1 >= field.GetLength(1) || field[snakeHeadX, snakeHeadY + 1].Text != "")
-                {
-                    timer1.Enabled = false;
-                    MessageBox.Show("Game over");
-                }
-                else
-                {
-                    field[snakeHeadX, snakeHeadY].Text = "";
-                    snakeHeadY++;
-                }
-            }
-            else if (direction == 2)
-            {
-                if (snakeHeadX - 1 < 0 || field[snakeHeadX - 1, snakeHeadY].Text != "")
-                {
-                    timer1.Enabled = false;
-                    MessageBox.Show("Game over");
-                }
-                else
-                {
-                    field[snakeHeadX, snakeHeadY].Text = "";
-                    snakeHeadX--;
-                }
-            }
-            else if (direction == 3)
-            {
-                if (snakeHeadY - 1 < 0 || field[snakeHeadX, snakeHeadY - 1].Text != "")
-                {
-                    timer1.Enabled = false;
-                    MessageBox.Show("Game over");
-                }
-                else
-                {
-                    field[snakeHeadX, snakeHeadY].Text = "";
-                    snakeHeadY--;
-                }
-            }
-            field[snakeHeadX, snakeHeadY].Text = "snakeHead";
+            field[snakeHeadY, snakeHeadX].Image = Resources.snakeHead;
             label3.Text = snakeHeadX.ToString();
             label4.Text = snakeHeadY.ToString();
         }
 
         private void новаяИграToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateField(field);
+            CreateField(ref field);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (direction != 2)
+            {
+                direction = 0;
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (direction != 3)
+            {
+                direction = 1;
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (direction != 0)
+            {
+                direction = 2;
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (direction != 1)
+            {
+                direction = 3;
+            }
         }
     }
 }

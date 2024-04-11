@@ -83,5 +83,23 @@
   <ItemGroup>
     <None Include="Resources\png-transparent-cute-snake-pixel-art-bead-pixel-art-animals-text-rectangle.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fieldPiece.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

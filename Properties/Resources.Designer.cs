@@ -63,9 +63,69 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap downArrow {
+            get {
+                object obj = ResourceManager.GetObject("downArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fieldPiece {
+            get {
+                object obj = ResourceManager.GetObject("fieldPiece", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leftArrow {
+            get {
+                object obj = ResourceManager.GetObject("leftArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_cute_snake_pixel_art_bead_pixel_art_animals_text_rectangle {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-cute-snake-pixel-art-bead-pixel-art-animals-text-rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rightArrow {
+            get {
+                object obj = ResourceManager.GetObject("rightArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snakeHead {
+            get {
+                object obj = ResourceManager.GetObject("snakeHead", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upArrow {
+            get {
+                object obj = ResourceManager.GetObject("upArrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
