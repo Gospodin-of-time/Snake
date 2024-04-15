@@ -101,5 +101,86 @@
   <ItemGroup>
     <None Include="Resources\fieldPiece.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snakeHead5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftArrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rightArrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upArrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downArrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0,1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0,3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1,0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1,2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2,1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2,3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3,0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3,2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
