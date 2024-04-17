@@ -63,6 +63,16 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apple {
+            get {
+                object obj = ResourceManager.GetObject("Apple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap downArrow {
             get {
                 object obj = ResourceManager.GetObject("downArrow", resourceCulture);
@@ -73,9 +83,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Food {
+        internal static System.Drawing.Bitmap Head0Green {
             get {
-                object obj = ResourceManager.GetObject("Food", resourceCulture);
+                object obj = ResourceManager.GetObject("Head0Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +93,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Head0 {
+        internal static System.Drawing.Bitmap Head1Green {
             get {
-                object obj = ResourceManager.GetObject("Head0", resourceCulture);
+                object obj = ResourceManager.GetObject("Head1Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +103,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Head1 {
+        internal static System.Drawing.Bitmap Head2Green {
             get {
-                object obj = ResourceManager.GetObject("Head1", resourceCulture);
+                object obj = ResourceManager.GetObject("Head2Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,19 +113,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Head2 {
+        internal static System.Drawing.Bitmap Head3Green {
             get {
-                object obj = ResourceManager.GetObject("Head2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Head3 {
-            get {
-                object obj = ResourceManager.GetObject("Head3", resourceCulture);
+                object obj = ResourceManager.GetObject("Head3Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment0 {
+        internal static System.Drawing.Bitmap Segment0_1Green {
             get {
-                object obj = ResourceManager.GetObject("Segment0", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment0,1Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment0_1 {
+        internal static System.Drawing.Bitmap Segment0_3Green {
             get {
-                object obj = ResourceManager.GetObject("Segment0,1", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment0,3Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment0_3 {
+        internal static System.Drawing.Bitmap Segment0Green {
             get {
-                object obj = ResourceManager.GetObject("Segment0,3", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment0Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment1 {
+        internal static System.Drawing.Bitmap Segment1_0Green {
             get {
-                object obj = ResourceManager.GetObject("Segment1", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment1,0Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment1_0 {
+        internal static System.Drawing.Bitmap Segment1_2Green {
             get {
-                object obj = ResourceManager.GetObject("Segment1,0", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment1,2Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment1_2 {
+        internal static System.Drawing.Bitmap Segment1Green {
             get {
-                object obj = ResourceManager.GetObject("Segment1,2", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment1Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment2 {
+        internal static System.Drawing.Bitmap Segment2_1Green {
             get {
-                object obj = ResourceManager.GetObject("Segment2", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment2,1Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment2_1 {
+        internal static System.Drawing.Bitmap Segment2_3Green {
             get {
-                object obj = ResourceManager.GetObject("Segment2,1", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment2,3Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment2_3 {
+        internal static System.Drawing.Bitmap Segment2Green {
             get {
-                object obj = ResourceManager.GetObject("Segment2,3", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment2Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment3 {
+        internal static System.Drawing.Bitmap Segment3_0Green {
             get {
-                object obj = ResourceManager.GetObject("Segment3", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment3,0Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment3_0 {
+        internal static System.Drawing.Bitmap Segment3_2Green {
             get {
-                object obj = ResourceManager.GetObject("Segment3,0", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment3,2Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Segment3_2 {
+        internal static System.Drawing.Bitmap Segment3Green {
             get {
-                object obj = ResourceManager.GetObject("Segment3,2", resourceCulture);
+                object obj = ResourceManager.GetObject("Segment3Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tail0 {
+        internal static System.Drawing.Bitmap Tail0Green {
             get {
-                object obj = ResourceManager.GetObject("Tail0", resourceCulture);
+                object obj = ResourceManager.GetObject("Tail0Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tail1 {
+        internal static System.Drawing.Bitmap Tail1Green {
             get {
-                object obj = ResourceManager.GetObject("Tail1", resourceCulture);
+                object obj = ResourceManager.GetObject("Tail1Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +283,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tail2 {
+        internal static System.Drawing.Bitmap Tail2Green {
             get {
-                object obj = ResourceManager.GetObject("Tail2", resourceCulture);
+                object obj = ResourceManager.GetObject("Tail2Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tail3 {
+        internal static System.Drawing.Bitmap Tail3Green {
             get {
-                object obj = ResourceManager.GetObject("Tail3", resourceCulture);
+                object obj = ResourceManager.GetObject("Tail3Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

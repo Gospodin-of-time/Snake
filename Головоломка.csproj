@@ -182,5 +182,32 @@
   <ItemGroup>
     <None Include="Segment3,2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Head0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pixil-frame-0.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
