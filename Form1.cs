@@ -28,19 +28,25 @@ namespace Головоломка
         int headDirection;
         int previousHeadDirection;
         int tailDirection;
-        //headDirection: 0 = right, 1 = down, 2 = left, 3 = up
+        //*Direction: 0 = right, 1 = down, 2 = left, 3 = up
         int headX;
         int headY;
         int tailX;
         int tailY;
-        private void SpaceLeft()
+        int fieldColor = 0;
+        //fieldColor: 0 = blue, 1 = green, 2 = white, 3 = yellow 
+        int difficulty = 1;
+        //difficulty: 0 = easy, 1 = medium; 2 = hard
+        int score;
+        int bestScore = 0;
+        private bool SpaceLeft()
         {
             bool spaceLeft = false;
             for(int i = 0; i < actualField.GetLength(0); i++)
             {
                 for (int j = 0; j < actualField.GetLength(1); j++)
                 {
-                    if (actualField[i, j] != null)
+                    if (actualField[i, j] == null || actualField[i, j] == "Food")
                     {
                         spaceLeft = true;
                     }
@@ -48,12 +54,15 @@ namespace Головоломка
             }
             if (spaceLeft)
             {
-
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         private void button26_Click(object sender, EventArgs e)
         {
-            button1.Visible = false;
             CreateField(); 
         }
         private void ChooseAssets()
@@ -133,18 +142,53 @@ namespace Головоломка
                 {
                     actualField[i, j] = null;
                     visibleField[i, j].Visible = true;
-                    visibleField[i, j].BackColor = Color.LightBlue;
+                    switch (fieldColor)
+                    {
+                        case 0:
+                            visibleField[i, j].BackColor = Color.LightBlue;
+                            break;
+                        case 1:
+                            visibleField[i, j].BackColor = Color.SeaGreen;
+                            break;
+                        case 2:
+                            visibleField[i, j].BackColor = Color.White;
+                            break;
+                        case 3:
+                            visibleField[i, j].BackColor = Color.Khaki;
+                            break;
+                    }
                     visibleField[i, j].Image = null;
                 }
             }
             ChooseAssets();
             PlaceSnake();
             PlaceFood();
+            switch (difficulty)
+            {
+                case 0:
+                    timer1.Interval = 1000;
+                    break;
+                case 1:
+                    timer1.Interval = 700;
+                    break;
+                case 2:
+                    timer1.Interval = 500;
+                    break;
+            }
             timer1.Enabled = true;
+            settingsToolStripMenuItem.Enabled = true;
+            button1.Visible = false;
+            score = 0;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (!SpaceLeft())
+            {
+                timer1.Stop();
+                MessageBox.Show("You win");
+                return;
+            }
             if (IsSolid())
             {
                 timer1.Stop();
@@ -157,6 +201,12 @@ namespace Головоломка
             }
             MoveHead();
             previousHeadDirection = headDirection;
+            label1.Text = $"Score: {score}";
+            if (score > bestScore)
+            {
+                bestScore = score;
+            }
+            label2.Text = $"Best score: {bestScore}";
             //MessageBox.Show($"{actualField[0, 0]}|{actualField[0, 1]}|{actualField[0, 2]}|{actualField[0, 3]}|{actualField[0, 4]}|{actualField[1, 0]}|{actualField[1, 1]}|{actualField[1, 2]}|{actualField[1, 3]}|{actualField[1, 4]}|{actualField[2, 0]}|{actualField[2, 1]}|{actualField[2, 2]}|{actualField[2, 3]}|{actualField[2, 4]}|{actualField[3, 0]}|{actualField[3, 1]}|{actualField[3, 2]}|{actualField[3, 3]}|{actualField[3, 4]}|{actualField[4, 0]}|{actualField[4, 1]}|{actualField[4, 2]}|{actualField[4, 3]}|{actualField[4, 4]}");
         }
 
@@ -201,99 +251,103 @@ namespace Головоломка
             switch (headDirection)
             {
                 case 0:
-                        if (IsFood())
-                        {
-                            PlaceFood();
-                        }
-                        if (previousHeadDirection == 1)
-                        {
-                            actualField[headY, headX] = "Segment0,1";
-                            visibleField[headY, headX].Image = assets[8];
-                        }
-                        else if (previousHeadDirection == 3)
-                        {
-                            actualField[headY, headX] = "Segment0,3";
-                            visibleField[headY, headX].Image = assets[9];
-                        }
-                        else
-                        {
-                            actualField[headY, headX] = "Segment0";
-                            visibleField[headY, headX].Image = assets[4];
-                        }
-                        headX++;
-                    actualField[headY, headX] = "Head0";
+                    if (IsFood())
+                    {
+                        score++;
+                        PlaceFood();
+                    }
+                    if (previousHeadDirection == 1)
+                    {
+                        actualField[headY, headX] = "Segment0,1";
+                        visibleField[headY, headX].Image = assets[8];
+                    }
+                    else if (previousHeadDirection == 3)
+                    {
+                        actualField[headY, headX] = "Segment0,3";
+                        visibleField[headY, headX].Image = assets[9];
+                    }
+                    else
+                    {
+                        actualField[headY, headX] = "Segment0";
+                        visibleField[headY, headX].Image = assets[4];
+                    }
+                    headX++;
+                    actualField[headY, headX] = "Head";
                     visibleField[headY, headX].Image = assets[0];
                     break;
                 case 1:
-                        if (IsFood())
-                        {
-                            PlaceFood();
-                        }
-                        if (previousHeadDirection == 0)
-                        {
-                            actualField[headY, headX] = "Segment1,0";
-                            visibleField[headY, headX].Image = assets[10];
-                        }
-                        else if (previousHeadDirection == 2)
-                        {
-                            actualField[headY, headX] = "Segment1,2";
-                            visibleField[headY, headX].Image = assets[11];
-                        }
-                        else
-                        {
-                            actualField[headY, headX] = "Segment1";
-                            visibleField[headY, headX].Image = assets[5];
-                        }
-                        headY++;
-                    actualField[headY, headX] = "Head1";
+                    if (IsFood())
+                    {
+                        score++;
+                        PlaceFood();
+                    }
+                    if (previousHeadDirection == 0)
+                    {
+                        actualField[headY, headX] = "Segment1,0";
+                        visibleField[headY, headX].Image = assets[10];
+                    }
+                    else if (previousHeadDirection == 2)
+                    {
+                        actualField[headY, headX] = "Segment1,2";
+                        visibleField[headY, headX].Image = assets[11];
+                    }
+                    else
+                    {
+                        actualField[headY, headX] = "Segment1";
+                        visibleField[headY, headX].Image = assets[5];
+                    }
+                    headY++;
+                    actualField[headY, headX] = "Head";
                     visibleField[headY, headX].Image = assets[1];
                     break;
                 case 2:
-                        if (IsFood())
-                        {
-                            PlaceFood();
-                        }
-                        if (previousHeadDirection == 1)
-                        {
-                            actualField[headY, headX] = "Segment2,1";
-                            visibleField[headY, headX].Image = assets[12];
-                        }
-                        else if (previousHeadDirection == 3)
-                        {
-                            actualField[headY, headX] = "Segment2,3";
-                            visibleField[headY, headX].Image = assets[13];
-                        }
-                        else
-                        {
-                            actualField[headY, headX] = "Segment2";
-                            visibleField[headY, headX].Image = assets[6];
-                        }
-                        headX--;
-                    actualField[headY, headX] = "Head2";
+                    if (IsFood())
+                    {
+                        score++;
+                        PlaceFood();
+                    }
+                    if (previousHeadDirection == 1)
+                    {
+                        actualField[headY, headX] = "Segment2,1";
+                        visibleField[headY, headX].Image = assets[12];
+                    }
+                    else if (previousHeadDirection == 3)
+                    {
+                        actualField[headY, headX] = "Segment2,3";
+                        visibleField[headY, headX].Image = assets[13];
+                    }
+                    else
+                    {
+                        actualField[headY, headX] = "Segment2";
+                        visibleField[headY, headX].Image = assets[6];
+                    }
+                    headX--;
+                    actualField[headY, headX] = "Head";
                     visibleField[headY, headX].Image = assets[2];
                     break;
                 case 3:
-                        if (IsFood())
-                        {
-                            PlaceFood();
-                        }
-                        if (previousHeadDirection == 0)
-                        {
-                            actualField[headY, headX] = "Segment3,0";
-                            visibleField[headY, headX].Image = assets[14];
-                        }
-                        else if (previousHeadDirection == 2)
-                        {
-                            actualField[headY, headX] = "Segment3,2";
-                            visibleField[headY, headX].Image = assets[15];
-                        }
-                        else
-                        {
-                            actualField[headY, headX] = "Segment3";
-                            visibleField[headY, headX].Image = assets[7];
-                        }
-                        headY--;
-                    actualField[headY, headX] = "Head3";
+                    if (IsFood())
+                    {
+                        score++;
+                        PlaceFood();
+                    }
+                    if (previousHeadDirection == 0)
+                    {
+                        actualField[headY, headX] = "Segment3,0";
+                        visibleField[headY, headX].Image = assets[14];
+                    }
+                    else if (previousHeadDirection == 2)
+                    {
+                        actualField[headY, headX] = "Segment3,2";
+                        visibleField[headY, headX].Image = assets[15];
+                    }
+                    else
+                    {
+                        actualField[headY, headX] = "Segment3";
+                        visibleField[headY, headX].Image = assets[7];
+                    }
+                    headY--;
+                    actualField[headY, headX] = "Head";
                     visibleField[headY, headX].Image = assets[3];
                     break;
             }
@@ -448,13 +502,13 @@ namespace Головоломка
                     }
                     break;
                 case 2:
-                    if (headX < 0 || actualField[headY, headX - 1] != null && actualField[headY, headX - 1] != "Food")
+                    if (headX - 1 < 0 || actualField[headY, headX - 1] != null && actualField[headY, headX - 1] != "Food")
                     {
                         return true;
                     }
                     break;
                 case 3:
-                    if (headY < 0 || actualField[headY - 1, headX] != null && actualField[headY - 1, headX] != "Food")
+                    if (headY - 1 < 0 || actualField[headY - 1, headX] != null && actualField[headY - 1, headX] != "Food")
                     {
                         return true;
                     }
@@ -463,14 +517,66 @@ namespace Головоломка
             return false;
         }
 
+        private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            fieldColor = comboBox2.SelectedIndex;
+            difficulty = comboBox4.SelectedIndex;
+            groupBox1.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+            newGameToolStripMenuItem.Enabled = true;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            button2.Visible = false;
+            comboBox1.Visible = false;
+            comboBox2.Visible = false;
+            comboBox3.Visible = false;
+            comboBox4.Visible = false;
+            CreateField();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            groupBox1.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            newGameToolStripMenuItem.Enabled = false;
+            for (int i = 0; i < visibleField.GetLength(0); i++)
+            {
+                for (int j = 0; j < visibleField.GetLength(1); j++)
+                {
+                    visibleField[i, j].Visible = false;
+                }
+            }
+            label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+            label7.Visible = true;
+            button2.Visible = true;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            comboBox3.Visible = true;
+            comboBox4.Visible = true;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
