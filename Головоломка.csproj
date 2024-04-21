@@ -209,5 +209,137 @@
   <ItemGroup>
     <None Include="pixil-frame-0.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head0Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head1Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head2Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head3Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0,1Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0,3Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1,0Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1,2Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2,1Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2,3Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3,0Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3,2Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail0Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail1Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail2Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail3Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head0Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head1Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head2Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Head3Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0,1Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0,3Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment0Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1,0Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1,2Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment1Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2,1Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2,3Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment2Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3,0Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3,2Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Segment3Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail0Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail1Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail2Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tail3Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pear.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,6 +37,10 @@ namespace Головоломка
         //fieldColor: 0 = blue, 1 = green, 2 = white, 3 = yellow 
         int difficulty = 1;
         //difficulty: 0 = easy, 1 = medium; 2 = hard
+        int snakeColor = 0;
+        //snakeColor: 0 = green, 1 = blue, 2 = gray
+        int foodType = 0;
+        //foodType: 0 = apple, 1 = orange, 2 = banana, 3 = pear
         int score;
         int bestScore = 0;
         private bool SpaceLeft()
@@ -67,36 +71,114 @@ namespace Головоломка
         }
         private void ChooseAssets()
         {
-            assets[0] = Resources.Head0Green;
-            assets[1] = Resources.Head1Green;
-            assets[2] = Resources.Head2Green;
-            assets[3] = Resources.Head3Green;
-            assets[4] = Resources.Segment0Green;
-            assets[5] = Resources.Segment1Green;
-            assets[6] = Resources.Segment2Green;
-            assets[7] = Resources.Segment3Green;
-            assets[8] = Resources.Segment0_1Green;
-            assets[9] = Resources.Segment0_3Green;
-            assets[10] = Resources.Segment1_0Green;
-            assets[11] = Resources.Segment1_2Green;
-            assets[12] = Resources.Segment2_1Green;
-            assets[13] = Resources.Segment2_3Green;
-            assets[14] = Resources.Segment3_0Green;
-            assets[15] = Resources.Segment3_2Green;
-            assets[16] = Resources.Tail0Green;
-            assets[17] = Resources.Tail1Green;
-            assets[18] = Resources.Tail2Green;
-            assets[19] = Resources.Tail3Green;
-            assets[20] = Resources.Apple;
+            switch (snakeColor)
+            {
+                case 0:
+                    assets[0] = Resources.Head0Green;
+                    assets[1] = Resources.Head1Green;
+                    assets[2] = Resources.Head2Green;
+                    assets[3] = Resources.Head3Green;
+                    assets[4] = Resources.Segment0Green;
+                    assets[5] = Resources.Segment1Green;
+                    assets[6] = Resources.Segment2Green;
+                    assets[7] = Resources.Segment3Green;
+                    assets[8] = Resources.Segment0_1Green;
+                    assets[9] = Resources.Segment0_3Green;
+                    assets[10] = Resources.Segment1_0Green;
+                    assets[11] = Resources.Segment1_2Green;
+                    assets[12] = Resources.Segment2_1Green;
+                    assets[13] = Resources.Segment2_3Green;
+                    assets[14] = Resources.Segment3_0Green;
+                    assets[15] = Resources.Segment3_2Green;
+                    assets[16] = Resources.Tail0Green;
+                    assets[17] = Resources.Tail1Green;
+                    assets[18] = Resources.Tail2Green;
+                    assets[19] = Resources.Tail3Green;
+                    break;
+                case 1:
+                    assets[0] = Resources.Head0Blue;
+                    assets[1] = Resources.Head1Blue;
+                    assets[2] = Resources.Head2Blue;
+                    assets[3] = Resources.Head3Blue;
+                    assets[4] = Resources.Segment0Blue;
+                    assets[5] = Resources.Segment1Blue;
+                    assets[6] = Resources.Segment2Blue;
+                    assets[7] = Resources.Segment3Blue;
+                    assets[8] = Resources.Segment0_1Blue;
+                    assets[9] = Resources.Segment0_3Blue;
+                    assets[10] = Resources.Segment1_0Blue;
+                    assets[11] = Resources.Segment1_2Blue;
+                    assets[12] = Resources.Segment2_1Blue;
+                    assets[13] = Resources.Segment2_3Blue;
+                    assets[14] = Resources.Segment3_0Blue;
+                    assets[15] = Resources.Segment3_2Blue;
+                    assets[16] = Resources.Tail0Blue;
+                    assets[17] = Resources.Tail1Blue;
+                    assets[18] = Resources.Tail2Blue;
+                    assets[19] = Resources.Tail3Blue;
+                    break;
+                case 2:
+                    assets[0] = Resources.Head0Gray;
+                    assets[1] = Resources.Head1Gray;
+                    assets[2] = Resources.Head2Gray;
+                    assets[3] = Resources.Head3Gray;
+                    assets[4] = Resources.Segment0Gray;
+                    assets[5] = Resources.Segment1Gray;
+                    assets[6] = Resources.Segment2Gray;
+                    assets[7] = Resources.Segment3Gray;
+                    assets[8] = Resources.Segment0_1Gray;
+                    assets[9] = Resources.Segment0_3Gray;
+                    assets[10] = Resources.Segment1_0Gray;
+                    assets[11] = Resources.Segment1_2Gray;
+                    assets[12] = Resources.Segment2_1Gray;
+                    assets[13] = Resources.Segment2_3Gray;
+                    assets[14] = Resources.Segment3_0Gray;
+                    assets[15] = Resources.Segment3_2Gray;
+                    assets[16] = Resources.Tail0Gray;
+                    assets[17] = Resources.Tail1Gray;
+                    assets[18] = Resources.Tail2Gray;
+                    assets[19] = Resources.Tail3Gray;
+                    break;
+            }
+            switch (foodType)
+            {
+                case 0:
+                    assets[20] = Resources.Apple;
+                    break;
+                case 1:
+                    assets[20] = Resources.Orange;
+                    break;
+                case 2:
+                    assets[20] = Resources.Banana;
+                    break;
+                case 3:
+                    assets[20] = Resources.Pear;
+                    break;
+            }
         }
         private void PlaceSnake()
         {
+            switch (snakeColor)
+            {
+                case 0:
+                    visibleField[2, 3].Image = Resources.Head0Green;
+                    visibleField[2, 2].Image = Resources.Segment0Green;
+                    visibleField[2, 1].Image = Resources.Tail0Green;
+                    break;
+                case 1:
+                    visibleField[2, 3].Image = Resources.Head0Blue;
+                    visibleField[2, 2].Image = Resources.Segment0Blue;
+                    visibleField[2, 1].Image = Resources.Tail0Blue;
+                    break;
+                case 2:
+                    visibleField[2, 3].Image = Resources.Head0Gray;
+                    visibleField[2, 2].Image = Resources.Segment0Gray;
+                    visibleField[2, 1].Image = Resources.Tail0Gray;
+                    break;
+            }
             actualField[2, 3] = "Head0";
-            visibleField[2, 3].Image = Resources.Head0Green;
             actualField[2, 2] = "Segment0";
-            visibleField[2, 2].Image = Resources.Segment0Green;
             actualField[2, 1] = "Tail0";
-            visibleField[2, 1].Image = Resources.Tail0Green;
             headDirection = 0;
             previousHeadDirection = 0;
             tailDirection = 0;
@@ -361,16 +443,16 @@ namespace Головоломка
                     if (actualField[tailY, tailX + 1] == "Segment1,0")
                     {
                         tailDirection = 1;
-                        visibleField[tailY, tailX + 1].Image = Resources.Tail1Green;
+                        visibleField[tailY, tailX + 1].Image = assets[17];
                     }
                     else if (actualField[tailY, tailX + 1] == "Segment3,0")
                     {
                         tailDirection = 3;
-                        visibleField[tailY, tailX + 1].Image = Resources.Tail3Green;
+                        visibleField[tailY, tailX + 1].Image = assets[19];
                     }
                     else
                     {
-                        visibleField[tailY, tailX + 1].Image = Resources.Tail0Green;
+                        visibleField[tailY, tailX + 1].Image = assets[16];
                     }
                     actualField[tailY, tailX] = null;
                     visibleField[tailY, tailX].Image = null;
@@ -381,16 +463,16 @@ namespace Головоломка
                     if (actualField[tailY + 1, tailX] == "Segment0,1")
                     {
                         tailDirection = 0;
-                        visibleField[tailY + 1, tailX].Image = Resources.Tail0Green;
+                        visibleField[tailY + 1, tailX].Image = assets[16];
                     }
                     else if (actualField[tailY + 1, tailX] == "Segment2,1")
                     {
                         tailDirection = 2;
-                        visibleField[tailY + 1, tailX].Image = Resources.Tail2Green;
+                        visibleField[tailY + 1, tailX].Image = assets[18];
                     }
                     else
                     {
-                        visibleField[tailY + 1, tailX].Image = Resources.Tail1Green;
+                        visibleField[tailY + 1, tailX].Image = assets[17];
                     }
                     actualField[tailY, tailX] = null;
                     visibleField[tailY, tailX].Image = null;
@@ -401,16 +483,16 @@ namespace Головоломка
                     if (actualField[tailY, tailX - 1] == "Segment1,2")
                     {
                         tailDirection = 1;
-                        visibleField[tailY, tailX - 1].Image = Resources.Tail1Green;
+                        visibleField[tailY, tailX - 1].Image = assets[17];
                     }
                     else if (actualField[tailY, tailX - 1] == "Segment3,2")
                     {
                         tailDirection = 3;
-                        visibleField[tailY, tailX - 1].Image = Resources.Tail3Green;
+                        visibleField[tailY, tailX - 1].Image = assets[19];
                     }
                     else
                     {
-                        visibleField[tailY, tailX - 1].Image = Resources.Tail2Green;
+                        visibleField[tailY, tailX - 1].Image = assets[18];
                     }
                     actualField[tailY, tailX] = null;
                     visibleField[tailY, tailX].Image = null;
@@ -421,16 +503,16 @@ namespace Головоломка
                     if (actualField[tailY - 1, tailX] == "Segment0,3")
                     {
                         tailDirection = 0;
-                        visibleField[tailY - 1, tailX].Image = Resources.Tail0Green;
+                        visibleField[tailY - 1, tailX].Image = assets[16];
                     }
                     else if (actualField[tailY - 1, tailX] == "Segment2,3")
                     {
                         tailDirection = 2;
-                        visibleField[tailY - 1, tailX].Image = Resources.Tail2Green;
+                        visibleField[tailY - 1, tailX].Image = assets[18];
                     }
                     else
                     {
-                        visibleField[tailY - 1, tailX].Image = Resources.Tail3Green;
+                        visibleField[tailY - 1, tailX].Image = assets[19];
                     }
                     actualField[tailY, tailX] = null;
                     visibleField[tailY, tailX].Image = null;
@@ -519,12 +601,14 @@ namespace Головоломка
 
         private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Eat food to grow \r\nDon't bump into walls or your own body");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            snakeColor = comboBox1.SelectedIndex;
             fieldColor = comboBox2.SelectedIndex;
+            foodType = comboBox3.SelectedIndex;
             difficulty = comboBox4.SelectedIndex;
             groupBox1.Visible = true;
             label1.Visible = true;
