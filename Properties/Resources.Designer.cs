@@ -93,6 +93,46 @@ namespace Головоломка.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fake_apple {
+            get {
+                object obj = ResourceManager.GetObject("Fake apple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fake_banana {
+            get {
+                object obj = ResourceManager.GetObject("Fake banana", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fake_orange {
+            get {
+                object obj = ResourceManager.GetObject("Fake orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fake_pear {
+            get {
+                object obj = ResourceManager.GetObject("Fake pear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Head0Blue {
             get {
                 object obj = ResourceManager.GetObject("Head0Blue", resourceCulture);
@@ -736,6 +776,16 @@ namespace Головоломка.Properties {
         internal static System.Drawing.Bitmap upArrow {
             get {
                 object obj = ResourceManager.GetObject("upArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wall {
+            get {
+                object obj = ResourceManager.GetObject("Wall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

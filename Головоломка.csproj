@@ -341,5 +341,20 @@
   <ItemGroup>
     <None Include="Pear.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fake apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fake banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fake orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fake pear.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

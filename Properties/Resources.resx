@@ -157,6 +157,9 @@
   <data name="Segment3Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment3Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Pear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Head3Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Head3Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,8 +208,8 @@
   <data name="leftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\leftArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Segment3,0Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Segment3,2Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Segment0,3Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Segment0,1Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Head3Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Head3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,14 +232,14 @@
   <data name="Segment2,1Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment2,3Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Segment0,3Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Segment0,1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Tail0Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Tail0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Segment1,0Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment1,2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Segment3,0Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment3,2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,17 +253,23 @@
   <data name="Head2Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Head2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Head1Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Head1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Segment2Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Segment2Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tail3Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Tail3Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Segment1Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment1Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Head0Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Head0Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Banana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rightArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Segment3Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixil-frame-0 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,8 +283,8 @@
   <data name="Segment2,3Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment2,3Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Segment0,3Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Segment0,1Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Head0Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Head0Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Head1Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Head1Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,14 +295,17 @@
   <data name="Tail0Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Tail0Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Head1Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Head1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Segment0Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment0Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Segment1,2Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment1,0Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Segment2Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Segment2Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Segment0,3Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Segment0,1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tail2Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Tail2Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,11 +313,11 @@
   <data name="Segment1,0Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment1,2Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Segment3,0Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Segment3,2Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="upArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tail3Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Tail3Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Segment0,1Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Segment0,1Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,13 +325,16 @@
   <data name="Head2Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Head2Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Banana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Banana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fake apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Fake apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fake banana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Fake banana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Pear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fake orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Fake orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fake pear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Fake pear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
