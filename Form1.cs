@@ -48,7 +48,7 @@ namespace Головоломка
         //foodType: 0 = apple, 1 = orange, 2 = banana, 3 = pear
         int gamemode = 0;
         //gamemode: 0 = classic, 1 = fake food, 2 = walls
-        int food;
+        int food = 1;
         int score;
         int bestScore = 0;
         private bool SpaceLeft()
@@ -276,7 +276,7 @@ namespace Головоломка
                 MessageBox.Show("Game over");
                 return;
             }
-            if (!IsFood(ref food))
+            if (!IsFood(ref food) || food != 0)
             {
                 MoveTail();
             }
@@ -302,7 +302,10 @@ namespace Головоломка
                 case 0:
                     if (IsFood(ref food))
                     {
-                        score++;
+                        if (food == 0)
+                        {
+                            score++;
+                        }
                         if (gamemode == 1)
                         {
                             if (food == 0)
@@ -341,7 +344,10 @@ namespace Головоломка
                 case 1:
                     if (IsFood(ref food))
                     {
-                        score++;
+                        if (food == 0)
+                        {
+                            score++;
+                        }
                         if (gamemode == 1)
                         {
                             if (food == 0)
@@ -380,7 +386,10 @@ namespace Головоломка
                 case 2:
                     if (IsFood(ref food))
                     {
-                        score++;
+                        if (food == 0)
+                        {
+                            score++;
+                        }
                         if (gamemode == 1)
                         {
                             if (food == 0)
@@ -419,7 +428,10 @@ namespace Головоломка
                 case 3:
                     if (IsFood(ref food))
                     {
-                        score++;
+                        if (food == 0)
+                        {
+                            score++;
+                        }
                         if (gamemode == 1)
                         {
                             if (food == 0)
@@ -575,6 +587,7 @@ namespace Головоломка
                     else if (field[headY, headX + 1].Image == assets[21])
                     {
                         food = 1;
+                        return true;
                     }
                     break;
                 case 1:
@@ -586,6 +599,7 @@ namespace Головоломка
                     else if (field[headY + 1, headX].Image == assets[21])
                     {
                         food = 1;
+                        return true;
                     }
                     break;
                 case 2:
@@ -597,6 +611,7 @@ namespace Головоломка
                     else if (field[headY, headX - 1].Image == assets[21])
                     {
                         food = 1;
+                        return true;
                     }
                     break;
                 case 3:
@@ -608,6 +623,7 @@ namespace Головоломка
                     else if (field[headY - 1, headX].Image == assets[21])
                     {
                         food = 1;
+                        return true;
                     }
                     break;
             }
